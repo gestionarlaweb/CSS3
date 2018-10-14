@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- necesario para visualizar una página HTML correctamente -->
+	<meta charset="utf-8">
+	<!-- Para que sea responsive-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proyecto HTML5 y CSS3</title>
+
+</head>
+<style type="text/css">
+	
+	
+	html{
+		background-color: #FFFFFF;
+	}
+	/*  Fondo de la página #eee */
+	body{
+		background-color: #eee;
+
+		margin-top: 5%;
+    	margin-left: 5%;
+	    margin-right: 5%;
+	    margin-bottom: 5%; 	    
+	    padding: 4%;  
+	    position:absolute;
+	}
+
+	
+
+.padre {
+  /* IMPORTANTE */
+  text-align: center;
+   position:absolute;
+}
+
+.hijo1 {       
+		position:relative;              
+        margin-top: -150px; /* Altura */
+        margin-bottom: 70px; 
+
+    	margin-left: -75px;
+	    margin-right: 5px;
+	    
+	    padding: 12%;  
+
+	    background: -moz-linear-gradient(top, #090 0%, #f7f7f7 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #090 0%,#f7f7f7 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #090 0%,#f7f7f7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */    
+  
+  /* IMPORTANTE no añade un salto de línea después del elemento, por lo que el elemento puede sentarse al lado de otros elementos */
+  display: inline-block;
+}
+
+.hijo2 {                     
+ 		position:relative;              
+        margin-top: -150px; 
+        margin-bottom: 70px; 
+
+    	margin-left: 20px;
+	    margin-right: 5px;
+	    
+	    padding: 12%;     
+
+	    background: -moz-linear-gradient(left, rgba(9,9,156,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgba(9,9,156,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(9,9,156,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */  
+  
+  display: inline-block;
+}
+
+.hijo3 {
+ 		position:relative;              
+        margin-top: -150px; 
+        margin-bottom: 70px; 
+
+    	margin-left: 20px;
+	    margin-right: 5px;
+	    
+	    padding: 12%;    
+
+	    
+		background: #b8e1fc; /* Old browsers */
+		background: -moz-linear-gradient(40deg, #909 0%, #990 60%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(40deg, #909 0%, #990 60%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(40deg, #909 0%, #990 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', endColorstr='#bdf3fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */    
+  
+
+  display: inline-block;
+}
+
+
+
+.hijo4 {
+	position:relative; 
+  		margin-top: 40px;      
+        margin-bottom: 10px; 
+
+    	margin-left: 400px;
+	    margin-right: 750px;
+	      
+	    padding: 12%;  
+
+	     background-image: radial-gradient(#099, white);
+  
+  
+  display: inline-block;
+}
+
+
+
+.contenedor {
+	
+	width: 1100px;  /* ancho */
+	height: 850px;  /* alto  */
+	font-family: Arial;
+	background-color: #fff;
+	margin: auto;
+	padding-top: 35px;  /* Espacio entre la flecha artículos y los 3 cubos*/
+
+
+	/* Efecto sombra */
+	 -webkit-box-shadow: 0px 1px 19px 11px rgba(0,0,0,0.57);
+		-moz-box-shadow: 0px 1px 19px 11px rgba(0,0,0,0.57);
+		box-shadow: 0px 1px 19px 11px rgba(0,0,0,0.4);
+}
+
+.articulos {
+	position: relative;
+	top: -190px; /* abajo*/
+	color:#fff;
+	/*  Fondo de la etiqueta  Artículos #d20000  ROJO */
+	background-color: #d20000;
+	padding: 10px 30px;
+	margin-left: -20px;  /* Moverlo hacia la izquierda */
+	/* position: relative; */
+	width:120px;
+    height:32px;
+}
+.flecha-left{
+	position: relative;
+	top: -64px; /* abajo*/
+	left: -30px;
+	width:0px;
+    height:0px;
+    border-bottom:30px solid transparent;  /* izquierda flecha */
+    border-top:39px solid transparent; /* derecha flecha */
+    border-left:32px solid #eee ; /* base flecha y color #eee*/
+    font-size:0px;
+    line-height:0px;
+    z-index:15; /* este 15 hace que se muestre por delante del otro DIV el triangulo */
+}
+.flecha-right{
+	position: relative;
+	top: -118px; /* abajo*/
+	left: 160px;
+	width:0px;
+    height:0px;
+    border-bottom:25px solid transparent;  /* izquierda flecha */
+    border-top:25px solid transparent; /* derecha flecha */
+    border-left:25px solid #d20000 ; /* base flecha y color #d20000*/
+    font-size:0px;
+    line-height:0px;
+    z-index:15; /* este 15 hace que se muestre por delante del otro DIV el triangulo */
+}
+
+
+
+
+.articulo1 {
+	position:absolute; /* importante que aquí sea absolute*/
+	width: 170px; /* ancho del contenido */
+    
+    /* posición del elemento*/
+	left: 1px; /* posición desde la izquierda */
+	top: 280px; /* altura*/
+  	 
+    border-right: 60px solid transparent;
+    border-left: 50px solid #d20000;
+    border-top: 50px solid #d20000;
+}
+.texto1 {
+	position:absolute; /* importante que aquí sea absolute*/
+	color:#fff; /* color del texto #fff */
+	width: 170px;
+    
+    left: -65px; /* posición desde la izquierda */
+	top: -55px; /* altura*/  
+}
+.articulo1:hover {
+	z-index:15;
+ 	background-color: #009;
+ 	border-left: 50px solid #009;
+	border-top: 50px solid #009;
+	transition:all 0.6s ease;
+					
+}
+				
+.articulo2 {
+	position:absolute; 
+	width: 170px; 
+    
+    
+	left: 1px; 
+	top: 280px; 
+  	 
+    border-right: 60px solid transparent;
+    border-left: 50px solid #d20000;
+    border-top: 50px solid #d20000;
+}
+.texto2 {
+	position:absolute; 
+	color:#fff; 
+	width: 170px;
+    
+    left: -65px; 
+	top: -55px; 
+}
+.articulo2:hover {
+	z-index:15;
+ 	background-color: #009;
+ 	border-left: 50px solid #009;
+	border-top: 50px solid #009;
+	transition:all 0.6s ease;
+					
+}
+				
+.articulo3 {
+	position:absolute; 
+	width: 170px; 
+    
+   
+	left: 1px; 
+	top: 280px; 
+  	 
+    border-right: 60px solid transparent;
+    border-left: 50px solid #d20000;
+    border-top: 50px solid #d20000;
+}
+.texto3 {
+	position:absolute; 
+	color:#fff; 
+	width: 170px;
+    
+    left: -65px; 
+	top: -55px; 
+}
+.articulo3:hover {
+	z-index:15;
+ 	background-color: #009;
+ 	border-left: 50px solid #009;
+	border-top: 50px solid #009;
+	transition:all 0.6s ease;
+					
+}	
+				
+
+.articulo4 {
+	position:absolute; 
+	width: 170px; 
+    
+    
+	left: 1px; 
+	top: 270px; 
+   
+    border-right: 60px solid transparent;
+    border-left: 50px solid #d20000;
+    border-top: 50px solid #d20000;
+}
+.texto4 {
+	position:absolute; 
+	color:#fff; 
+	width: 170px;
+    
+    left: -65px; 
+	top: -55px; 
+}				
+.articulo4:hover {
+	z-index:15;
+ 	background-color: #009;
+ 	border-left: 50px solid #009;
+	border-top: 50px solid #009;
+	transition:all 0.6s ease;
+					
+}
+				
+
+</style>
+
+<body>	
+
+		<div class="contenedor">
+			
+			<h3 class="flecha-left"></h3>
+			<h3 class="flecha-right"></h3>
+			<h1 class="articulos ">Artículos</h1>
+
+
+			<div class="padre">
+				  <div class="hijo1">
+				  	<div class="articulo1">
+				  		<h3 class="texto1">Artículo 1</h3>
+				  	</div>
+				  </div>		  
+				  <div class="hijo2">
+				  	<div class="articulo2">
+				  		<h3 class="texto2">Artículo 2</h3>
+				  	</div>
+				  </div>
+				  <div class="hijo3">
+				  	<div class="articulo3">
+				  		<h3 class="texto3">Artículo 3</h3>
+				  	</div>
+				  </div>
+				  <div class="hijo4">
+				  	<div class="articulo4">
+				  		<h3 class="texto4">Artículo 4</h3>
+				  	</div>
+				  	
+				  </div>	
+			</div>
+		</div>
+		
+	
+</body>
+</html>
